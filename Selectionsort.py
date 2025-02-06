@@ -9,7 +9,12 @@ def findSmallest(arr):
 
 def Selection(arr):
     NewArr = []
-    for i in range():
+    for i in range(len(arr)):
+        smallest = findSmallest(arr)
+        NewArr.append(arr.pop(smallest))
+    return NewArr
+
+print(Selection([5, 7, 8, 3, 5]))
 
 
 
