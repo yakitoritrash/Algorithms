@@ -8,7 +8,7 @@ var topKFreq = function (nums, k) {
   }
 
   for (let [num, freq] of freqMap) {
-    buckets[freq] = (buckets[freq] || new Set()).add(nums);
+    buckets[freq] = (buckets[freq] || new Set()).add(num);
   }
 
   for (let i = buckets.length-1; i >= 0; i--) {
