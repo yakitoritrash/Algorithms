@@ -3,5 +3,21 @@ var topKFreq = function (nums, k) {
   const buckets = [];
   const result = [];
 
+  for (let num of nums) {
+    freqMap.set(num, (freqMap.get(num) || 0) + 1);
+  }
 
+  for (let [num, freq] of freqMap) {
+    buckets[freq] = (buckets[freq] || new Set()).add(num);
+  }
+
+  for (let i = buckets.length; i >= 0; i--) {
+    if (buckets[i]) {
+      result.push(...buckets[i]);
+    }
+    if (result.length === k) {
+      break;
+    }
+  }
+  return result;
 }
