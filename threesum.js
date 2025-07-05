@@ -11,6 +11,8 @@ function threeSum (nums) {
         res.push([nums[i], nums[left], nums[right]]);
         left++;
         right--;
+        while (left < right && arr[left] == arr[left - 1]) left++;
+        while (left < right && arr[right] == arr[right + 1]) right--;
       } else if (nums[left] + nums[right] + nums[i] > 0) {
         right--;
       } else {
