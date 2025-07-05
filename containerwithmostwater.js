@@ -1,22 +1,20 @@
 function maxHeight(height) {
   let left = 0;
   let right = height.length - 1;
-  let products = [];
+  let products = 0;
   while (left < right) {
     let product = Math.min(height[left], height[right]) * (right - left);
-    products.push(product);
-    left++;
-  }
+    products = Math.max(products, product);
 
-  while (left < right) {
-    let product = Math.min(height[left], height[right]) * (right - left);
-    products.push(product);
-    right--;
+    if (height[left] < height[right]) {
+      left++;
+    } else {
+      right--;
+    }
   }
   console.log(height);
   console.log(products);
-  console.log(Math.max(...products));
 }
 
-maxHeight([1,8,6,2,5,4,8,3,7]);
+maxHeight([8,7,2,1]);
 
