@@ -20,4 +20,4 @@ function validParantheses(s) {
   return arr.length === 0;
 }
 
-validParantheses('()[]{}')
+validParantheses('()[]{}{](')
