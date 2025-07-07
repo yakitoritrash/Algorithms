@@ -15,7 +15,7 @@ function trap (height) {
     } else {
       r--;
       rightMax = Math.max(rightMax, height[r]);
-      res += rightMax - height[l];
+      res += rightMax - height[r];
     }
   }
   console.log(res);
