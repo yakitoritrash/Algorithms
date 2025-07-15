@@ -16,4 +16,3 @@ function maxHeight(height) {
 }
 
 maxHeight([8,7,2,1]);
-
