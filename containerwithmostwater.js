@@ -5,7 +5,6 @@ function maxHeight(height) {
   while (left < right) {
     let product = Math.min(height[left], height[right]) * (right - left);
     products = Math.max(products, product);
-
     if (height[left] < height[right]) {
       left++;
     } else {
